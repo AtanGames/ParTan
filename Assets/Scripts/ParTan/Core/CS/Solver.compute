@@ -1,0 +1,45 @@
+#pragma kernel ParticleUpdateK
+#pragma kernel GridZeroK
+#pragma kernel ParticleToGridK
+#pragma kernel GridUpdateK
+#pragma kernel GridToParticleK
+#pragma kernel ParticleIntegrateK
+
+#include "ParticleUpdate.hlsl"
+#include "GridUpdate.hlsl"
+
+[numthreads(64,1,1)]
+void ParticleUpdateK (uint3 id : SV_DispatchThreadID)
+{
+    ParticleUpdate(id.x);
+}
+
+[numthreads(64,1,1)]
+void GridZeroK (uint3 id : SV_DispatchThreadID)
+{
+    GridZero(id.x);
+}
+
+[numthreads(64,1,1)]
+void ParticleToGridK (uint3 id : SV_DispatchThreadID)
+{
+    ParticleToGrid(id.x);
+}
+
+[numthreads(64,1,1)]
+void GridUpdateK (uint3 id : SV_DispatchThreadID)
+{
+    GridUpdate(id.x);
+}
+
+[numthreads(64,1,1)]
+void GridToParticleK (uint3 id : SV_DispatchThreadID)
+{
+    GridToParticle(id.x);
+}
+
+[numthreads(64,1,1)]
+void ParticleIntegrateK (uint3 id : SV_DispatchThreadID)
+{
+    ParticleIntegrate(id.x);
+}
