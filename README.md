@@ -8,7 +8,7 @@ This project reimplements the core logic of PB-MPM in Unity, targeting 2D partic
 - **Elastic**
 - **Sand**
 
-[![Demo Video](https://img.youtube.com/vi/NY_GPeFWePo/0.jpg)](https://www.youtube.com/watch?v=NY_GPeFWePo)
+[Watch the demo video](https://www.youtube.com/watch?v=NY_GPeFWePo)
 
 ## ⚙️ Unity Version
 
