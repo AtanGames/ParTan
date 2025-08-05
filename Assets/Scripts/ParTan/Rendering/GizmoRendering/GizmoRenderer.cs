@@ -16,6 +16,10 @@ namespace ParTan.Rendering.GizmoRendering
         public Color viscousColor;
         public Color sandColor;
 
+        [Space] 
+        
+        public Color borderColor;
+
         public PartanConfig config;
         
         private NativeArray<Particle> _particleData;
@@ -63,13 +67,11 @@ namespace ParTan.Rendering.GizmoRendering
         {
             var fullMin = Vector2.zero;
             var fullSize = new Vector2(config.simConstants.gridSize.x, config.simConstants.gridSize.y);
-            Gizmos.color = Color.gray;
-            Gizmos.DrawWireCube(fullMin + fullSize * 0.5f, fullSize);
 
             var inset = SimConstants.GuardianSize;
             var innerMin = fullMin + new Vector2(inset, inset);
             var innerSize = fullSize - new Vector2(inset * 2f, inset * 2f);
-            Gizmos.color = Color.yellow;
+            Gizmos.color = borderColor;
             Gizmos.DrawWireCube(innerMin + innerSize * 0.5f, innerSize);
             
             if (!Application.isPlaying)
