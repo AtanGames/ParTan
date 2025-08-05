@@ -9,6 +9,7 @@ This project reimplements the core logic of PB-MPM in Unity, targeting 2D partic
 - **Sand**
 
 ![Description](demo.gif)
+![Description](demo2.gif)
 
 ## ⚙️ Unity Version
 
